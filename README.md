@@ -1,1 +1,2 @@
-# laptop-recommandation-system
+Live Demo---> https://simple-lrs.herokuapp.com
+
