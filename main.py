@@ -21,4 +21,4 @@ def suggest():
     return render_template('index.html' ,result=enumerate(Recommendations))
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0')
