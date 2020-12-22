@@ -39,7 +39,7 @@ def suggest_by_spec(title):
     res=cosine_similarity(recommendation,title)
     similarity = list(enumerate(res))
     similarity_score = sorted(similarity , key=lambda x:x[1] , reverse=True)
-    similarity_score = similarity_score[:10]
+    similarity_score = similarity_score[:5]
     lap_indices = [i[0] for i in similarity_score]
     all_data=details.reset_index()
     #print(type(all_data.iloc[lap_indices,0].values.tolist()))
