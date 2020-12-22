@@ -19,7 +19,7 @@ def loaddata():
     vector_class=pickle.load(vec)
     vec.close()
 
-    details=pd.read_csv(r"dataset\export_dataframe.csv",index_col="PRODUCT")
+    details=pd.read_csv("dataset\export_dataframe.csv",index_col="PRODUCT")
 
 
     #print(details.head())
