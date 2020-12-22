@@ -19,7 +19,7 @@ def loaddata():
     vector_class=pickle.load(vec)
     vec.close()
 
-    details=pd.read_csv(r"E:\Major project\LAPTOP\dataset\export_dataframe.csv",index_col="PRODUCT")
+    details=pd.read_csv(r"dataset\export_dataframe.csv",index_col="PRODUCT")
 
 
     #print(details.head())
@@ -42,10 +42,11 @@ def suggest_by_spec(title):
     similarity_score = similarity_score[:10]
     lap_indices = [i[0] for i in similarity_score]
     all_data=details.reset_index()
-    return(all_data.iloc[lap_indices].values)
+    #print(type(all_data.iloc[lap_indices,0].values.tolist()))
+    return(all_data.iloc[lap_indices,0].values.tolist())
     
 if __name__ =="util":
     loaddata()  
    
-
+#suggest_by_spec("Lenovo 5gb")
 

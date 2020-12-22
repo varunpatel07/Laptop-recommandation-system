@@ -17,7 +17,8 @@ def suggest():
     '''
     Laptop =  request.form["model"]
     Recommendations = util.suggest(Laptop)
-    return render_template('index.html' ,result=Recommendations)
+    #print(Recommendations)
+    return render_template('index.html' ,result=enumerate(Recommendations))
 
 if __name__ == "__main__":
     app.run(debug=True)

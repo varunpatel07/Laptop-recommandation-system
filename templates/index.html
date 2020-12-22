@@ -26,11 +26,30 @@
         <button type="submit" class="btn btn-primary btn-block btn-large" , value='suggest'>Submit</button>
     </form>
 
-   <br>
-   <br>
-   {{ result }}
+  </div>     
 
- </div>
+  <div id="tablediv" style="
+  padding-left: 40%; padding-top: 28%;
+">
+    <table>
+      <tr>
+        <th>S.NO</th>
+      <th>Laptop</th>
+    </tr>
+    
+      {%for i,j in result%}
+      <tr>
+      <td>{{i+1}}</td>
+      <td>{{j}}</td>
+    </tr>
+      {%endfor%}    
+    </table>
+
+   </div>
+  
+  
+
+
 
 
 </body>
